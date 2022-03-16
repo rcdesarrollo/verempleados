@@ -1,0 +1,55 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:core="sap.ui.core" controllerName="minera.mc.verempleados.controller.EmployeeDetails" displayBlock="true">
+
+    <Page title="{i18n>employeeDetails}" showHeader="true">
+
+        <content>
+            <ObjectHeader
+                icon="sap-icon://employee"
+                iconDensityAware="false"
+                iconAlt=""
+                imageShape="Circle"
+                responsive="true"
+                title="{employeeModel>FirstName} {employeeModel&gt;LastName}"
+                intro="{employeeModel>Dni}"
+                class="sapUiResponsivePadding--header" >
+                    <ObjectAttribute title="Fecha de Incorporacion" text="{employeeModel>CreationDate}" />
+                    <ObjectAttribute title="Comentario" text="{employeeModel>Comments}" />
+                    <ObjectAttribute title="Tipo" text="{employeeModel>Type}" />
+            </ObjectHeader>    
+
+            <IconTabBar expandable="false" expanded="true" applyContentPadding="false" backgroundDesign="Solid" visible="true" selectedKey="Ok">
+                <items>
+                    <IconTabFilter icon="sap-icon://hint" iconColor="Positive" text="Historial" count="" design="Vertical" showAll="false" textDirection="Inherit" enabled="true" visible="true" iconDensityAware="false">
+                        <content>
+
+                        </content>
+                    </IconTabFilter>
+                    <IconTabSeparator icon="" iconDensityAware="false"/>
+                    <IconTabFilter icon="sap-icon://attachment" iconColor="Neutral" text="Ficheros" count="" design="Vertical" showAll="false" textDirection="Inherit" enabled="true" visible="true" iconDensityAware="false">
+                        <content>
+
+                        </content>
+                    </IconTabFilter>
+                    <IconTabSeparator icon="" iconDensityAware="false"/>
+                </items>
+                <content>
+                    <Text text="Contenido aqui ..." width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                </content>
+            </IconTabBar>         
+
+        </content>
+
+        <footer>
+            <OverflowToolbar width="100%" height="auto" design="Auto" enabled="true" visible="true">
+                <content>
+                    <ToolbarSpacer width=""/>
+                    <Button text="Dar de baja" type="Accept" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" press="_onButtonPress"/>
+                    <Button text="Ascender" type="Reject" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" press="_onButtonPress1"/>
+                </content>
+            </OverflowToolbar>
+        </footer>
+
+
+    </Page>
+
+</mvc:View>

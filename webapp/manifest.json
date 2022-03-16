@@ -71,7 +71,7 @@
                     "bundleName": "minera.mc.verempleados.i18n.i18n"
                 }
             },
-            "": {
+            "employeeModel": {
                 "dataSource": "mainService",
                 "preload": true,
                 "settings": {}
@@ -96,28 +96,39 @@
             },
             "routes": [
                 {
-                    "name": "RouteView1",
-                    "pattern": "RouteView1",
+                    "name": "RouteMain",
+                    "pattern": "",
                     "target": [
-                        "TargetView1"
+                        "TargetMain"
+                    ]
+                },
+                {
+                    "name": "RouteOrderDetails",
+                    "pattern": "OrderDetails/{OrderID}",
+                    "target": [
+                        "TargetOrderDetails"
                     ]
                 }
             ],
             "targets": {
-                "TargetView1": {
+                "TargetMain": {
                     "viewType": "XML",
                     "transition": "slide",
                     "clearControlAggregation": false,
-                    "viewId": "View1",
-                    "viewName": "View1"
+                    "viewId": "Main",
+                    "viewName": "Main"
+                },
+                "TargetOrderDetails": {
+                    "viewType": "XML",
+                    "viewName": "OrderDetails"
                 }
             }
         },
         "rootView": {
-            "viewName": "minera.mc.verempleados.view.View1",
+            "viewName": "minera.mc.verempleados.view.App",
             "type": "XML",
             "async": true,
-            "id": "View1"
+            "id": "app"
         }
     },
     "sap.cloud": {

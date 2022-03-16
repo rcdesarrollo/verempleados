@@ -1,0 +1,18 @@
+<mvc:View
+    controllerName="minera.mc.verempleados.controller.MasterEmployee"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+>
+
+				<Page id="page" title="{i18n>title}" showNavButton="true" showHeader="true"  >
+					<content>       
+
+                        <core:Fragment fragmentName="minera.mc.verempleados.fragment.TableEmployee" type="XML" />
+
+                    </content>
+				</Page>
+
+</mvc:View>
+

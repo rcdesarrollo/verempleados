@@ -1,0 +1,33 @@
+<mvc:View
+    controllerName="minera.mc.verempleados.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:f="sap.f">
+
+                <Page showHeader="false" >
+                    <content>
+                        <f:FlexibleColumnLayout id="fcl" backgroundDesign="Solid" layout="TwoColumnsMidExpanded" >
+                            <f:beginColumnPages >
+                                <mvc:XMLView id="masterEmployeeView" viewName="minera.mc.verempleados.view.MasterEmployee" ></mvc:XMLView>
+                            </f:beginColumnPages>
+
+                            <f:midColumnPages>
+                                <mvc:XMLView id="detailEmployeeView" viewName="minera.mc.verempleados.view.EmployeeDetails" ></mvc:XMLView>
+                            </f:midColumnPages>
+
+                            <f:endColumnPages>
+                                <Page >
+                                
+                                </Page>
+                            </f:endColumnPages>
+                        </f:FlexibleColumnLayout>
+                    </content>
+                    <footer>
+                        <Toolbar >
+                        </Toolbar>
+                    </footer>
+                </Page>
+
+</mvc:View>
